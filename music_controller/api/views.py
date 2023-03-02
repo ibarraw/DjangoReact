@@ -6,6 +6,7 @@ from .models import Room
 
 # Create your views here.
 # this class will handle the get request to our endpoint
-class RoomView(generics.CreateAPIView):
+# createAPIView is a class that will handle the post request, whereas ListAPIView will handle the get request
+class RoomView(generics.ListAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
